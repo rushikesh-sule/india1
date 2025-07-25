@@ -1,0 +1,402 @@
+<html>
+    <head>
+        <title>INDIA</title>
+        <link rel="stylesheet" href="logo.png">
+    </head>
+    <style>
+        body{
+            padding: 0%;
+            margin: 0%;
+        }
+        #first{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+           background: linear-gradient(rgb(244, 129, 6),white,green);
+         }
+         video {
+            width: 200%;
+            height: 500px;
+            
+            background-image: url("vedio.mp4.mp4");
+           
+  } 
+  a{
+    color: blue;
+  }
+        #second{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background: linear-gradient(rgb(234, 119, 4),white,green); */
+        background-color: black;
+        
+    }
+     /* culter container */
+    
+    .culture-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 20px;
+        background-color: black;
+    }
+
+    .culture-card {
+        background: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .culture-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .culture-card h2 {
+        margin-top: 0;
+        color: #00754a;
+    }
+
+    .culture-card p {
+        color: #333;
+        line-height: 1.4;
+    }
+
+
+
+
+
+    .section {
+        padding: 60px 40px;
+        background-color: white;
+    }
+
+    .section:nth-child(even) {
+        background-color: #f0f0f0;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2em;
+        color: darkgreen;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .card {
+        background-color: white;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        margin: 15px;
+        color: #000;
+    }
+
+    .card p {
+        margin: 0 15px 15px;
+        font-size: 0.95em;
+        color: #000;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+ /* footer */
+
+    footer {
+ background-color: black;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  color: orange;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+
+
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes popIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+        }
+
+        .cards {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+
+
+    
+
+
+
+
+
+
+    </style>
+    <body>
+        <header>
+            <div id="first">
+                <img src="logo.png"width="100px">
+                
+                <a href="#">Home</a>
+                <a href="State.html">State</a>
+                <a href="tourism.html">Tourism</a>
+                <a href="Festivals.html">Festivals</a>
+                <a href="sessions.html">sessions</a>
+            
+            </div>
+             <div id="second" width="100%">
+             <video autoplay  loop muted width="100%" height="300px">
+                  <source src="vedio.mp4.mp4"width="100%"height="400px">video<source>
+
+             </video>
+        </div>
+        </header>
+        <div class="culture-container" id="Culture">
+        <div class="culture-card" style="background: linear-gradient(rgb(244, 129, 6),white,green);">
+            <h2>Festivals</h2>
+            <p>From Diwali to Eid, India celebrates over 100 festivals, each reflecting its spiritual harmony and
+                diversity.</p>
+        </div>
+
+        <div class="culture-card" style="background: linear-gradient(rgb(244, 129, 6),white,green);">
+            <h2> Classical Dances</h2>
+            <p>Each Indian state has its own traditional dance form like Kathak, Odissi, and Manipuri that reflect
+                stories and heritage.</p>
+        </div>
+
+        <div class="culture-card" style="background: linear-gradient(rgb(244, 129, 6),white,green);">
+            <h2> Folk Music</h2>
+            <p>From Rajasthani tunes to Assamese Bihu songs, India’s music represents its colorful cultural landscape.
+            </p>
+        </div>
+
+        <div class="culture-card" style="background: linear-gradient(rgb(244, 129, 6),white,green);">
+            <h2> Regional Dress</h2>
+            <p>Sarees, turbans, lungis, and phirans are traditional attires worn across different regions with pride.
+            </p>
+        </div>
+
+        <div class="culture-card" style="background: linear-gradient(rgb(244, 129, 6),white,green);">
+            <h2> Indian Cuisine</h2 >
+            <p>Each region offers unique dishes: biryani, dosa, dal baati, momos, and more!</p>
+        </div>
+
+        <div class="culture-card"style="background: linear-gradient(rgb(244, 129, 6),white,green);">
+            <h2> Architecture</h2>
+            <p>From Mughal domes to Dravidian temples, Indian architecture spans centuries and styles.</p>
+        </div>
+
+         <div class="culture-card"style="background: linear-gradient(rgb(244, 129, 6),white,green);">
+            <h2> Indian Cuisine</h2>
+            <p>Each region offers unique dishes: biryani, dosa, dal baati, momos, and more!</p>
+        </div>
+
+        <div class="culture-card" style="background: linear-gradient(rgb(244, 129, 6),white,green);">
+            <h2>Architecture</h2>
+            <p>From Mughal domes to Dravidian temples, Indian architecture spans centuries and styles.</p>
+        </div>
+    </div>
+
+    
+    
+    <section id="destinations" class="section" id="Tourism" style="background: linear-gradient(rgb(244, 129, 6),white,green);">
+        <h2>Top Destinations</h2>
+        <div class="cards" >
+             <div class="card">
+                <img src="Raigad fort.jpg"
+                    alt="Andaman Islands">
+                <h3>Maharashtra</h3>
+                <p>Fort was the capital of the Maratha Empire under the rule of Chhatrapati Shivaji Maharaj and holds immense historical and cultural significance.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.robinage.com/wp-content/uploads/2022/04/Taj-Mahal.jpg" alt="Taj Mahal">
+                <h3>Taj Mahal, Agra</h3>
+                <p>One of the Seven Wonders of the World, a symbol of love and Mughal architecture.</p>
+            </div>
+            <div class="card">
+                <img src="temple.jpg"
+                    alt="Kerala">
+                <h3>Kerala Backwaters</h3>
+                <p>Enjoy a peaceful boat ride through the lush and green waterways of God's Own state.</p>
+            </div>
+            <div class="card">
+                <img src="https://storage.justwravel.com/package/images/banner/detail_mobile/cropped/leh-ladakh-bike-backpacking-road-trip-manali-to-srinagar-JustWravel-1707153483-DLS-2.jpg.webp"
+                    alt="Leh Ladakh">
+                <h3>Leh-Ladakh</h3>
+                <p>High mountains, beautiful monasteries, and thrilling adventure routes await.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/h4_20170822181427.PNG"
+                    alt="Hawa Mahal Jaipur">
+                <h3>Hawa Mahal, Jaipur</h3>
+                <p>The iconic "Palace of Winds" known for its stunning pink sandstone architecture and cultural heritage
+                    of Rajasthan.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Hsc_YmmRPFc8ger-NODvUMr0cFG8z8oSBg&s"
+                    alt="Varanasi Ghats">
+                <h3>Ghats of Varanasi</h3>
+                <p>One of the world's oldest living cities, known for its holy Ganga Aarti, spirituality, and ancient
+                    traditions.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://i.ytimg.com/vi/rvmEz9RiDZ8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBs9miKai41nNl5I0KWrASRZLw7Bg"
+                    alt="Sikkim">
+                <h3>Sikkim</h3>
+                <p>A paradise in the Northeast with snow-capped peaks, monasteries, and the beautiful Gurudongmar Lake.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="https://i.natgeofe.com/n/b9e9b8d1-fa08-4b90-96bb-310cace03847/meenakshi-amman-temple-india.jpg"
+                    alt="Meenakshi Temple">
+                <h3>Meenakshi Temple, Madurai</h3>
+                <p>An architectural marvel in Tamil Nadu dedicated to Goddess Meenakshi, famous for its tall gopurams
+                    and sculptures.</p>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+  <div class="footer-container" id="Contact" >
+    <div class="footer-section" style="color: white;">
+      <h3 >About</h3>
+      <p>India is known for its vibrant festivals, each filled with colors, rituals, music, and joy across all religions and regions.</p>
+    </div>
+
+    <div class="footer-section" ">
+      <h3 >Quick Links</h3>
+      <ul >
+          <li ><a href="#about" >About</a></li>
+          <li ><a href="#contact">Contact</a></li>
+          <li ><a href="#festivals" >Festivals</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section" style="color: white;">
+      <h3 >Contact Us</h3>
+      <p>Email: rushisuley07@gmail.com</p>
+      <p>Phone: +91 - 8767740119</p>
+      <p>Location: chh.sambhajinagar,Maharashtra</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p >&copy; 2025 Festivals of India | All rights reserved.</p>
+  </div>
+</footer>
+
+    
+         
+
+    </body>
+</html>

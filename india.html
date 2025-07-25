@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible India | Land of Diversity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/76109445-7a6d-4ba6-90b4-ecfc6019201b.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .gallery-img {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Animation classes */
+        .animate-in {
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-gray-800">Incredible India</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-800 hover:text-amber-600 px-3 py-2">Home</a>
+                    <a href="#destinations" class="nav-link text-gray-800 hover:text-amber-600 px-3 py-2">Destinations</a>
+                    <a href="#culture" class="nav-link text-gray-800 hover:text-amber-600 px-3 py-2">Culture</a>
+                    <a href="#gallery" class="nav-link text-gray-800 hover:text-amber-600 px-3 py-2">Gallery</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4">
+            <a href="#home" class="block px-3 py-2 text-gray-800 hover:text-amber-600">Home</a>
+            <a href="#destinations" class="block px-3 py-2 text-gray-800 hover:text-amber-600">Destinations</a>
+            <a href="#culture" class="block px-3 py-2 text-gray-800 hover:text-amber-600">Culture</a>
+            <a href="#gallery" class="block px-3 py-2 text-gray-800 hover:text-amber-600">Gallery</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-white pt-16">
+        <div class="container mx-auto px-6 text-center animate-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Explore Incredible India</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">A land of breathtaking landscapes, ancient traditions, and vibrant culture</p>
+            <a href="#destinations" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full inline-block transition duration-300">Begin Your Journey</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">The Land of Diversity</h2>
+                <p class="text-lg text-gray-600">
+                    India is a vast country with incredible diversity in its geography, culture, languages, and traditions. 
+                    From the snow-capped Himalayas to the tropical beaches of Goa, from ancient temples to modern metropolises, 
+                    India offers a unique blend of experiences that captivate the soul.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-amber-50 p-8 rounded-lg shadow-md animate-in" style="animation-delay: 0.1s;">
+                    <div class="text-amber-600 mb-4">
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Geography</h3>
+                    <p class="text-gray-600">
+                        India's landscape varies from the Himalayan mountains in the north to the coastal plains in the south, 
+                        with deserts, forests, and fertile river valleys in between.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 p-8 rounded-lg shadow-md animate-in" style="animation-delay: 0.2s;">
+                    <div class="text-green-600 mb-4">
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Heritage</h3>
+                    <p class="text-gray-600">
+                        With over 5000 years of recorded history, India is home to ancient civilizations, 
+                        UNESCO World Heritage Sites, and architectural marvels like the Taj Mahal.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 animate-in" style="animation-delay: 0.3s;">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Cultural Mosaic</h3>
+                    <p class="text-gray-600">
+                        India is a multicultural society with dozens of languages, hundreds of dialects, 
+                        and countless festivals celebrated year-round.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section id="destinations" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Popular Destinations</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover India's most breathtaking locations</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Destination 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d0d4515e-1a95-411c-aee9-29b1dab2141a.png" alt="Majestic Taj Mahal at sunrise with reflecting pool in foreground, Agra, India" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-bold">Heritage</div>
+                    </div>
+                    <div classp-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Taj Mahal</h3>
+                        <p class="text-gray-600 mb-4">
+                            The iconic white marble mausoleum in Agra, built by Emperor Shah Jahan in memory of his wife Mumtaz Mahal. 
+                            A UNESCO World Heritage site and one of the New Seven Wonders of the World.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Agra, Uttar Pradesh
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Destination 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/efcf6608-24a3-49e0-bc32-76ec5dae3537.png" alt="Sunrise on the Ganges River with pilgrims bathing and boats floating, Varanasi, India" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">Spiritual</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Varanasi</h3>
+                        <p class="text-gray-600 mb-4">
+                            One of the world's oldest continuously inhabited cities and the spiritual capital of India. 
+                            The Ganga Aarti ceremony at Dashashwamedh Ghat is a mesmerizing experience.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Varanasi, Uttar Pradesh
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Destination 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/249d5d13-dafc-45c5-9df9-fd1bd9ba0bc2.png" alt="Dramatic mountain landscape with colorful prayer flags fluttering in the wind, Ladakh, India" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">Adventure</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ladakh</h3>
+                        <p class="text-gray-600 mb-4">
+                            Known as "Little Tibet," Ladakh offers stunning landscapes, Buddhist monasteries, 
+                            and some of the highest motorable roads in the world. A paradise for adventure seekers.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Ladakh, Jammu & Kashmir
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Highlights -->
+    <section id="culture" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Cultural Highlights</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Experience the vibrant traditions of India</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex flex-col md:flex-row items-center animate-in" style="animation-delay: 0.2s;">
+                    <div class="md:w-1/3 mb-6 md:mb-0 md:mr-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7e58f446-fb2a-44e3-ac90-d24ac521a2b2.png" alt="Bharatanatyam dancer in colorful costume performing with intricate hand gestures" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Classical Dance Forms</h3>
+                        <p class="text-gray-600 mb-4">
+                            India has eight major classical dance forms - Bharatanatyam, Kathak, Kathakali, Kuchipudi, 
+                            Manipuri, Mohiniyattam, Odissi, and Sattriya. Each originates from different regions and has 
+                            unique costumes, music, and storytelling traditions.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">Bharatanatyam</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Kathak</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Odissi</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center animate-in" style="animation-delay: 0.4s;">
+                    <div class="md:w-1/3 mb-6 md:mb-0 md:mr-6 order-last md:order-first">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a1ff042-1bcc-4a40-969e-4a809fab1158.png" alt="Colorful Holi festival celebration with people throwing colored powder" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Festivals</h3>
+                        <p class="text-gray-600 mb-4">
+                            India celebrates hundreds of festivals throughout the year. Diwali (Festival of Lights), Holi (Festival of Colors), 
+                            Durga Puja, Eid, Christmas, Pongal, Onam, and Baisakhi are some of the most widely celebrated, each with unique traditions.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Diwali</span>
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Holi</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Durga Puja</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center animate-in" style="animation-delay: 0.6s;">
+                    <div class="md:w-1/3 mb-6 md:mb-0 md:mr-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b6d568cd-c4d1-4797-829d-a7930f0bdebb.png" alt="Variety of Indian dishes including curries, breads and sweets arranged beautifully" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Cuisine</h3>
+                        <p class="text-gray-600 mb-4">
+                            Indian cuisine varies dramatically by region. From the rich Mughlai dishes of the north to 
+                            the coconut-based curries of the south, from vegetarian Gujarati thalis to fiery Naga pork dishes - 
+                            Indian food is as diverse as its culture.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Biryani</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Dosa</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Butter Chicken</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center animate-in" style="animation-delay: 0.8s;">
+                    <div class="md:w-1/3 mb-6 md:mb-0 md:mr-6 order-last md:order-first">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a9a162af-99f8-449e-a31f-a9975457d9b1.png" alt="Traditional Indian textiles including silk saris, embroidered fabrics and block prints" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Textiles & Handicrafts</h3>
+                        <p class="text-gray-600 mb-4">
+                            India has a rich tradition of textiles and handicrafts. From Banarasi silk sarees to Rajasthani block prints, 
+                            from Kashmiri Pashmina shawls to Keralan coir products, each region has its own specialty crafts passed down through generations.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Banarasi Silk</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Kashmiri Shawls</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Block Printing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">India Through The Lens</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A visual journey across this incredible nation</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 gallery">
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md gallery-img">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d0e801b9-059d-45d4-aa2e-87d709439f49.png" alt="Hawa Mahal palace facade with honeycomb windows in Jaipur, Rajasthan" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md gallery-img">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c9506f42-2c66-4e9b-826f-c19de1832520.png" alt="Houseboats floating on the peaceful backwaters of Kerala lined with palm trees" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md gallery-img">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d8a4b59e-c7d1-48e4-846a-9eb7b5bd07b6.png" alt="Golden Temple illuminated at night with devotees walking around the sacred pool" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md gallery-img">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/afbb65e1-0126-4e35-82c6-21f565539f41.png" alt="Palm-fringed sandy beach in Goa with colorful parasols and clear blue water" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md gallery-img">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9970ebf8-8f77-4803-8d9b-bbb6bfcd0a20.png" alt="Camel caravan at sunset in the Thar Desert with sand dunes stretching to horizon" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md gallery-img">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0ff8186b-126f-40f6-a8cc-15c240c46792.png" alt="Lush green tea plantations on the rolling hills of Darjeeling with workers harvesting" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md gallery-img">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2ba1cd7a-6c35-43a7-84f8-485d03d95016.png" alt="Skyline of Mumbai at dusk showing Marine Drive and Queen's Necklace lights" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md gallery-img">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f329acf0-3243-4367-bfbd-e024a7e33b2b.png" alt="Intricately carved ancient temples at Khajuraho with detailed sculptures" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="view-more-btn" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full inline-block transition duration-300">
+                    View More Images
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cuts-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Incredible India</h3>
+                    <p class="text-gray-400">
+                        Discover the land of ancient traditions, breathtaking landscapes, and vibrant culture. 
+                        Plan your journey through this incredible country.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#destinations" class="text-gray-400 hover:text-white transition duration-300">Destinations</a></li>
+                        <li><a href="#culture" class="text-gray-400 hover:text-white transition duration-300">Culture</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition duration-300">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>© 2023 Incredible India. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // View more button functionality for gallery
+        const viewMoreBtn = document.getElementById('view-more-btn');
+        viewMoreBtn.addEventListener('click', () => {
+            // In a real implementation, this would load more images
+            alert('More images would be loaded here in a complete implementation.');
+        });
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    element.style.animationPlayState = 'running';
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Run once on load
+    </script>
+</body>
+</html>
+
